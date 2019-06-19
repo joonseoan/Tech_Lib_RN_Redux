@@ -33,7 +33,7 @@ const style = {
         position: 'relative'
     },
     textStyle: {
-        paddingTop: 20,
+        paddingTop: 25,
         fontSize: 20
     }
 }

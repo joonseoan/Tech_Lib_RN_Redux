@@ -7,19 +7,24 @@ import { View, FlatList } from 'react-native';
 
 import ListItem from './ListItem';
 
-
 const LibraryList = props => {
+
+    // It is used for rendering!!!
     const renderItem = library => <ListItem library={ library } /> 
-    
 
     return(
         <FlatList 
             // rendering all list
+            // It hugs all elements in an array. 
             data={ props.libraries }
+
             // how to render each individual library
+            // It invokes a function renderItem above
+            //  with an argument, each item of the array.
             renderItem={ renderItem }
+
             // key: it is because map or list function is used under the scene.
-            keyExtractor={ library => library.id }
+            keyExtractor={ library => library.id.toString() }
         />
     );
 }
