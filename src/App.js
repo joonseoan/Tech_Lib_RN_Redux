@@ -8,9 +8,6 @@ import reducers from './reducers';
 import { Header } from './components/common';
 import LibraryList from './components/LibraryList';
 
-// ReduxTest
-// import ReduxTest from './components/ReduxTest';
-
 const App = () => {
   return (
     <Provider store={ createStore(reducers) }>
@@ -21,8 +18,6 @@ const App = () => {
       */}
       <View style={{ flex: 1 }}>
           <Header headerText="Tech Stack" />
-          {/* Redux Test */}
-          {/* <ReduxTest /> */}
           <LibraryList />
       </View>
     </Provider>

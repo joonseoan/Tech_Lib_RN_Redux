@@ -12,21 +12,23 @@ import { CardSection } from './common';
 import * as actions from '../actions';
 
 class ListItem extends React.Component {
-    // It is not working!! Therefore use Class
+
+    // It is not working!! It is an alternative only for componentDidUpdate
     // React.useEffect(() => {
     //    // UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
     //    UIManager.setLayoutAnimationEnabledExperimental(true);   
     //    LayoutAnimation.spring();
     // }, []);
 
+    // getDerivedStateFromProps can be replaced with "componentWillReceiveProps"
+    // Defalt state value should exists
+    state = {};
 
-    componentWillReceiveProps() {
-
-        // UIManager.setLayoutAnimationEnabledExperimental(true);   
+    static getDerivedStateFromProps = (props, state) => {
         UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
         LayoutAnimation.spring();
-
-    }
+        return null;
+    } 
 
     renderDescription = () => {
         // Only case that props.expanded === true
